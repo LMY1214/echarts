@@ -213,6 +213,15 @@ a {
   animation: rollPlay linear 10s infinite;
 }
 
+.content .row:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.message>.messageScrool:hover {
+  animation-play-state: paused;
+
+}
+
 @keyframes rollPlay {
   0% {}
 
