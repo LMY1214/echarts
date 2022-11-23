@@ -252,7 +252,7 @@ a {
 .point .pie {
   width: 3.9rem;
   height: 2.4rem;
-  background-color: rgb(92, 6, 6);
+  /* background-color: rgb(92, 6, 6); */
 }
 
 .point .data {
