@@ -322,6 +322,7 @@ a {
 .users {
   height: 2.6rem;
   display: flex;
+  /* margin-bottom: 1rem; */
 }
 
 .users .chart {
@@ -332,7 +333,8 @@ a {
 .users .bar {
   width: 7.35rem;
   height: 2.4rem;
-  background-color: rgb(211, 133, 133);
+  /* padding-top: 1rem; */
+  /* background-color: rgb(211, 133, 133); */
 }
 
 .users .data {

@@ -67,3 +67,103 @@ for (var i = 0; i < choseTab_.length; i++) {
         myChart.resize()
     })
 })();
+
+// 全国用户总量统计 
+(function () {
+    let myChart = echarts.init(document.getElementsByClassName('bar')[0]);
+
+    var item = {
+        name: '',
+        value: 1200,
+        itemStyle: {
+            color: "#254065"
+        },
+        tooltip: {
+            extraCssText: 'opacity:0'
+        }
+
+    }
+    let option = {
+        color: {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [
+                { offset: 0, color: '#00fffb' }, // 0 起始颜色
+                { offset: 1, color: '#0061ce' }  // 1 结束颜色
+            ],
+            global: false // 缺省为 false
+        },
+        grid: {
+            top: '4%',
+            right: '3%',
+            bottom: '3%',
+            left: '0%',
+            containLabel: true,
+            show: true,
+            borderColor: 'rgba(0, 240, 255, 0.3)'
+        },
+        tooltip: {
+            tigger: 'axis'
+        },
+        xAxis: {
+            type: 'category',
+            axisTick: {
+                // true意思：图形和刻度居中中间
+                // false意思：图形在刻度之间
+                alignWithLabel: false,
+                // 不显示刻度
+                show: false
+            },
+            axisLabel: {
+                color: '#71f2fb'
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(0, 240, 255, 0.3)',
+                    // width:8,  x轴线的粗细
+                    // opcity: 0,   如果不想显示x轴线 则改为 0
+                }
+            },
+
+            data: ['郑州', '广州', '北京', '深圳', '合肥', '', '......', '', '杭州', '厦门', '济南', '成都', '重庆']
+        },
+        yAxis: {
+            type: 'value',
+            axisTick: {
+                // 不显示刻度
+                show: false
+            },
+            axisLabel: {
+                color: '#71f2fb'
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(0, 240, 255, 0.3)',
+                    // width:8,  x轴线的粗细
+                    // opcity: 0,   如果不想显示x轴线 则改为 0
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'rgba(0, 240, 255, 0.3)'
+                }
+            }
+        },
+
+        series: [
+            {
+                data: [2100, 1900, 1700, 1560, 1400, item, item, item, 900, 750, 600, 480, 240], type: 'bar'
+            }
+        ]
+    };
+    myChart.setOption(option);
+    window.addEventListener('load', function () {
+        myChart.resize();
+    })
+    window.addEventListener('resize', function () {
+        myChart.resize();
+    })
+})()
