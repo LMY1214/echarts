@@ -407,7 +407,7 @@ order_.onmouseleave = function () {
 
         series: [
             {
-                name: 'Beijing',
+                name: 'ZhengZhou',
                 type: 'radar',
                 data: dataBJ,
                 symbol: 'none',
