@@ -393,8 +393,12 @@ a {
 }
 
 .order .data {
-  display: flex !important;
-  margin-top: 0.25rem;
+  display: flex;
+  margin-top: .0625rem;
+}
+
+.order .orderDataHidden {
+  display: none !important;
 }
 
 .order .item {
@@ -464,8 +468,9 @@ a {
 
 .sales .sline {
   width: 100%;
-  height: 90%;
-  background-color: rgb(240, 172, 172);
+  height: 110%;
+  margin-top: .125rem;
+  /* background-color: rgb(240, 172, 172); */
 }
 
 /* 渠道 季度区块 */
@@ -473,7 +478,10 @@ a {
   display: flex;
 }
 
-.channel,
+.channel {
+  flex: 2;
+}
+
 .quarter {
   flex: 1;
   height: 1.7rem;
@@ -490,7 +498,7 @@ a {
 .channel .data .radar {
   height: 1.9rem;
   width: 100%;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .channel h4 {
